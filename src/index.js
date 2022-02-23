@@ -89,7 +89,7 @@ app.delete('/todos/:id', checksExistsUserAccount, (request, response) => {
     } else {
         return response.status(400).json({ error: "Todo not found!" });
     }
-    return response.send();
+    return response.status(204).send();
 });
 
 module.exports = app;
